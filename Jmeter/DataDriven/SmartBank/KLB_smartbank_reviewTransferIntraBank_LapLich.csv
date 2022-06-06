@@ -1,0 +1,11 @@
+test.id,http.path,test.level,test.objective,test.cifNo_csv,test.isAccount_csv,test.accountNoFrom_csv,test.accountNoTo_csv,test.amount_csv,response.code_csv,response.message_csv,response.http_code_csv,active_or_not,groupcase
+1,ReviewTransferIntraBank,integration,Xem trước thông tin - Bỏ trống -  CifNo,,getapi,getapi,getapi,getapi,400,CifNo không đúng.,200,active,validate_ReviewTransferIntraBank
+2,ReviewTransferIntraBank,integration,Xem trước thông tin - Bỏ trống -  accountNoFrom,getapi,getapi,,getapi,getapi,400,Số tài khoản nguồn chưa đúng,200,active,validate_ReviewTransferIntraBank
+3,ReviewTransferIntraBank,integration,Xem trước thông tin - Bỏ trống -  accountNoTo,getapi,getapi,getapi,,getapi,4005021,Vui lòng nhập đầy đủ thông tin,200,active,validate_ReviewTransferIntraBank
+4,ReviewTransferIntraBank,integration,Xem trước thông tin - Bỏ trống -  all field,,0,,,0,400,CifNo không đúng.,200,active,validate_ReviewTransferIntraBank
+5,ReviewTransferIntraBank,integration,Xem trước thông tin - Sai- CifNo,535353453,getapi,getapi,getapi,getapi,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_ReviewTransferIntraBank
+6,ReviewTransferIntraBank,integration,Xem trước thông tin - Sai-  isAccount,getapi,5,getapi,getapi,getapi,5000000,Dịch vụ không thực hiện được lúc này. Quý khách vui lòng thử lại sau ít phút.,200,active,validate_ReviewTransferIntraBank
+7,ReviewTransferIntraBank,integration,Xem trước thông tin - Sai- accountNoFrom,getapi,getapi,4.35E+13,getapi,getapi,4005211,Số tài khoản chưa đăng ký để sử dụng.,200,active,validate_ReviewTransferIntraBank
+8,ReviewTransferIntraBank,integration,Xem trước thông tin - Sai- accountNoTo,getapi,getapi,getapi,3463634636,getapi,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_ReviewTransferIntraBank
+9,ReviewTransferIntraBank,integration,Xem trước thông tin - Sai-  amount = 0,getapi,getapi,getapi,getapi,0,4005043,Số tiền chuyển lớn hơn 1.000 VND,200,active,validate_ReviewTransferIntraBank
+10,ReviewTransferIntraBank,integration,Failure - Invalid - all field,4353535,435,345363634,343636,0,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_ReviewTransferIntraBank

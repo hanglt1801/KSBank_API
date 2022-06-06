@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3cd01e88-ef47-485d-be35-af5b01bac8b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Auth/VNWallet_API_Auth_Upload_IDProof.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Auth/VNWallet_API_home_Create_KYC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Auth/VNWallet_API_home_Sigin.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Auth/VNWallet_API_home_Signin_NEW.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Auth/VNWallet_API_home_Signup.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Auth/VNWallet_API_home_smartOTP.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Bank/VNWallet_API_FundinTPBank_App.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Bank/VNWallet_API_FundoutTPBank_App.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Bank/VNWallet_API_LinkBIDV.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Bank/VNWallet_API_LinkTPBank_BankSite.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Bank/VNWallet_API_LinkVCBank.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Electric - HCM.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Electric - HCM.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _BenThanh.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _BenThanh.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _BinhDuong.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _BinhDuong.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _DongNai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _DongNai.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _Gia Dinh.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _Gia Dinh.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _NhaBe.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _NhaBe.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _TanHoa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _TanHoa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _TrungAn.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/BillPayment/VNWallet_API_bill_pay_ Water _TrungAn.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/OnlinePaymen/VNWallet_API_Link_Wallet_From_APP.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/OnlinePaymen/VNWallet_API_Link_Wallet_From_APP.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/QR Code/VNWallet_API_QRCode_CreateOrder_Type4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Topup/VNWallet_API_HandleTimeoutTopup.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Topup/VNWallet_API_epin_confirm.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Topup/VNWallet_API_mobile_topup.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataDriven/Tranfer/VNWallet_API_money_tranfer.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Jmeter/DataDriven/Tranfer/VNWallet_API_money_tranfer.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_FundIn.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_FundIn_Linkbank.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_FundOut.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Home.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Home_Balance.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Home_Profile.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Linkbank.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Pin_Purchase.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Profile_Management_KYC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Request_Full_KYC Fundout.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_Request_Leve1_KYC.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_SignIn.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_SignUp.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_SignUpMobile.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_User_Profile.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_User_Profile_For_Testing.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_VirtualCard_Create.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_VirtualCard_Stop.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Mobile_VirtualCard_Unstop.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_GetCustomerInfo.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_GetCustomerKYCDetail.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_GetSearchListCus.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_OrderHistoryList.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_SignIn.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_TransLimitSetting.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_UpdateKYCRequest.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_Portal_UpdateOrderStatus.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_VirtualCard_From_Simpos.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_VirtualCard_Payment.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_VirtualCard_Payment_From_EndPoint.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/DataSet/VNWallet_VirtualCard_Payment_Tran.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_imgAI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_imgXXX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_09numbers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_12numbers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_12numbers2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_12numbers3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_12numbers_old.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_12numbers_old1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_9numbers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_DOANH1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_DOANHXXX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_identity_img_DUY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/first_passport_img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/pp.first_identity_imgXXX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_imgAI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_imgXXX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_09numbers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_12numbers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_12numbers_maxsize.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_12numbers_old.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_12numbers_old1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_9numbers.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_9numbers_DOANH.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_identity_img_9numbers_DUY.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/second_passport_img.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie1_selfie_img - Copy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_imgXXX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_2XXX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_2_identity09_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_2_identity09_AI2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_2_identity09_DOANH2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_2_identity12_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_2_identity9_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_99XXX.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_99_identity09_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_99_identity09_AI3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_99_identity09_DOANH3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_99_identity12_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_99_identity9_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity09_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity09_AI1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity09_DOANH1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity12_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity12_1_old.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity12_2_old.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity12_3_old.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/selfie_img_identity9_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/Images/vnpay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-bank-apis.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-bank-apis_OKD.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-bank-apis_OpenShift.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-billpay-api-Before Openshift.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-nonfinancial-apis_master.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-topup-apis_master.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-vitualcard-apis.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/ami-vn-consumer-platform-vitualcard-apis_OpenShift.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/vn-wallet-bank-payment-spi.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/vn-wallet-intergration-mobile.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/vn-wallet-intergration-portal.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/vn-wallet-performance.jmx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jmeter/vn-wallet-virtualcard-spi.jmx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1zWjxEhnsA6ARJfZRa0SaTpSV0R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cd01e88-ef47-485d-be35-af5b01bac8b5" name="Default Changelist" comment="" />
+      <created>1634270989529</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634270989529</updated>
+    </task>
+    <servers />
+  </component>
+</project>

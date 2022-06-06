@@ -1,0 +1,30 @@
+test.id,http.path,test.level,test.objective,test.bankCif_csv,test.bankCode_csv,test.accountNo_csv,test.isAccount_csv,response.code_csv,response.message_csv,response.http_code_csv,active_or_not,groupcase
+1,getBeneficiary,regression,Lấy thông tin tài khoản - Nội bộ KLB - Qua Tài Khoản - Cùng CIF,getapi,getapi,getapi,1,getapi,getapi,getapi,getapi,group_regression
+2,getBeneficiary,regression,Lấy thông tin tài khoản - Nội bộ KLB - Qua Tài Khoản - Khác CIF,getapi,getapi,getapi,1,getapi,getapi,getapi,getapi,group_regression
+3,getBeneficiary,regression,Lấy thông tin tài khoản - Nội bộ KLB - Qua Thẻ,getapi,getapi,getapi,1,getapi,getapi,getapi,getapi,group_regression
+4,getBeneficiary,regression,Lấy thông tin tài khoản - Liên ngân hàng - Qua Tài Khoản,getapi,getapi,getapi,1,getapi,getapi,getapi,getapi,group_regression
+5,getBeneficiary,regression,Lấy thông tin tài khoản - Liên ngân hàng - Qua Thẻ,getapi,getapi,getapi,1,getapi,getapi,getapi,getapi,group_regression
+7,getBeneficiary,integration,Lấy thông tin tài khoản - Bỏ trống - bankCif,,getapi,getapi,1,400,javax.validation.constraints.NotBlank.message,200,active,validate_getBeneficiary
+8,getBeneficiary,integration,Lấy thông tin tài khoản - Bỏ trống - bankCode,getapi,,getapi,1,400,javax.validation.constraints.NotBlank.message,200,active,validate_getBeneficiary
+9,getBeneficiary,integration,Lấy thông tin tài khoản - Bỏ trống - accountNo,getapi,getapi,,1,400,javax.validation.constraints.NotBlank.message,200,active,validate_getBeneficiary
+10,getBeneficiary,integration,Lấy thông tin tài khoản - Bỏ trống - all field,,,,1,400,javax.validation.constraints.NotBlank.message,200,active,validate_getBeneficiary
+11,getBeneficiary,integration,Lấy thông tin tài khoản - Nội Bộ KLB - Sai -  bankCif,123454AC,970452,99999986,1,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
+12,getBeneficiary,integration,Lấy thông tin tài khoản - Nội Bộ KLB - Sai -  bankCode,getapi,123456,99999986,1,4005091,Không thể kết nối với ngân hàng phát hành, đề nghị thử lại sau,200,active,validate_getBeneficiary
+13,getBeneficiary,integration,Lấy thông tin tài khoản - Nội Bộ KLB - Sai -  accountNo,getapi,970452,12345678958,1,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+14,getBeneficiary,integration,Lấy thông tin tài khoản - Nội Bộ KLB - Sai -  isAccount,getapi,970452,99999986,45646463,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+15,getBeneficiary,integration,Lấy thông tin tài khoản - Nội Bộ KLB - Sai -  all field,56757,56757,56757,6575,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
+16,getBeneficiary,integration,Lấy thông tin tài khoản - Napas - Sai -  bankCif,123454AC,970406,0129837294,1,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
+17,getBeneficiary,integration,Lấy thông tin tài khoản - Napas - Sai -  bankCode,getapi,123456,0129837294,1,4005091,Không thể kết nối với ngân hàng phát hành, đề nghị thử lại sau,200,active,validate_getBeneficiary
+18,getBeneficiary,integration,Lấy thông tin tài khoản - Napas - Sai -  accountNo,getapi,970406,0129837294343534534,1,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+19,getBeneficiary,integration,Lấy thông tin tài khoản - Napas - Sai -  isAccount,getapi,970406,0129837294,45646463,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+20,getBeneficiary,integration,Lấy thông tin tài khoản - Napas - Sai -  all field,56757,56757,56757,6575,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
+21,getBeneficiary,integration,Lấy thông tin Thẻ - Nội Bộ KLB - Sai -  bankCif,123454AC,970452,9704529304109521,0,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
+22,getBeneficiary,integration,Lấy thông tin Thẻ - Nội Bộ KLB - Sai -  bankCode,getapi,123456,9704529304109521,0,4005091,Không thể kết nối với ngân hàng phát hành, đề nghị thử lại sau,200,active,validate_getBeneficiary
+23,getBeneficiary,integration,Lấy thông tin Thẻ - Nội Bộ KLB - Sai -  accountNo,getapi,970452,9704520000000000,0,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+24,getBeneficiary,integration,Lấy thông tin Thẻ - Nội Bộ KLB - Sai -  isAccount,getapi,970452,9704529304109521,45646463,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+25,getBeneficiary,integration,Lấy thông tin Thẻ - Nội Bộ KLB - Sai -  all field,56757,56757,56757,6575,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
+26,getBeneficiary,integration,Lấy thông tin Thẻ - Napas - Sai -  bankCif,123454AC,970406,9704060129837294,0,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
+27,getBeneficiary,integration,Lấy thông tin Thẻ - Napas - Sai -  bankCode,getapi,123456,9704060129837294,0,4005091,Không thể kết nối với ngân hàng phát hành, đề nghị thử lại sau,200,active,validate_getBeneficiary
+28,getBeneficiary,integration,Lấy thông tin Thẻ - Napas - Sai -  accountNo,getapi,970406,9704060000000000,0,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+29,getBeneficiary,integration,Lấy thông tin Thẻ - Napas - Sai -  isAccount,getapi,970406,9704060129837294,45646463,4005192,Người thụ hưởng không tồn tại. Vui lòng kiểm tra lại,200,active,validate_getBeneficiary
+30,getBeneficiary,integration,Lấy thông tin Thẻ - Napas - Sai -  all field,56757,56757,56757,6575,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,validate_getBeneficiary
