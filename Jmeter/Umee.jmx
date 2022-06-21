@@ -537,7 +537,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - startLiveness" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - startLiveness" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API startLiveness" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -580,7 +580,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - saveLiveness" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - saveLiveness" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API saveLiveness" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -623,7 +623,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyLiveness" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyLiveness" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API verifyLiveness" enabled="true">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
@@ -655,7 +655,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyIdCard" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyIdCard" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API verifyIdCard" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -698,7 +698,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyPhoneNumber1" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyPhoneNumber1" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API verifyPhoneNumber" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -739,7 +739,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyPhoneNumber2" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - verifyPhoneNumber2" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API verifyPhoneNumber" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -781,7 +781,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - registerUser" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - registerUser" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API registerUser" enabled="true">
             <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -829,7 +829,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - Upload" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - Upload" enabled="false"/>
         <hashTree>
           <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API Upload - 1" enabled="false">
             <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
@@ -2549,6 +2549,59 @@
           </hashTree>
         </hashTree>
       </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Media API" enabled="false"/>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - Upload file" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API - Upload file" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">/smartbank/accounts?onlyTTGT=0</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Content-type" elementType="Header">
+                  <stringProp name="Header.name">authorization</stringProp>
+                  <stringProp name="Header.value">Bearer ${ext_access_token}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_accountNo" enabled="true">
+              <stringProp name="VAR">ext_accountNo</stringProp>
+              <stringProp name="JSONPATH">$.data.recordInfos[0].accountNo</stringProp>
+              <stringProp name="DEFAULT">error</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+              <stringProp name="INPUT_FORMAT">JSON</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+            <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_cifNo" enabled="true">
+              <stringProp name="VAR">ext_cifNo</stringProp>
+              <stringProp name="JSONPATH">$.data.recordInfos[0].cifNo</stringProp>
+              <stringProp name="DEFAULT">error</stringProp>
+              <stringProp name="VARIABLE"></stringProp>
+              <stringProp name="SUBJECT">BODY</stringProp>
+              <stringProp name="INPUT_FORMAT">JSON</stringProp>
+            </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
       <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="CMS" enabled="false"/>
       <hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="API - Login" enabled="true"/>
@@ -3675,7 +3728,7 @@ vars.put(&quot;test.errorCode&quot;,&quot;000&quot;);
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="SingUp" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="SingUp" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -3741,7 +3794,7 @@ vars.put(&quot;test.email&quot;,emailRandom);
               <stringProp name="filename"></stringProp>
               <stringProp name="cacheKey">false</stringProp>
               <stringProp name="script">// Anh mat truoc cmt
-vars.put(&quot;test.imageFront&quot;,&quot;D:/Sunshine_KLB/Jmeter/Images/cmd_mt_1_png.png&quot;);
+vars.put(&quot;test.imageFront&quot;,&quot;D:/KSBank_API/Jmeter/Images/cmd_mt_1_png.png&quot;);
 
 
 
