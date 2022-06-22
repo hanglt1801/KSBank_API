@@ -4073,7 +4073,7 @@ vars.put(&quot;test.faceImageUrl&quot;, &quot;${ext_previewUrl_selfie}&quot;);
             </ModuleController>
             <hashTree/>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="8. verifyPhoneNumber1" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="8. verifyPhoneNumber1" enabled="false">
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
@@ -4087,7 +4087,7 @@ vars.put(&quot;test.faceImageUrl&quot;, &quot;${ext_previewUrl_selfie}&quot;);
             </ModuleController>
             <hashTree/>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="8. verifyPhoneNumber2" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="8. verifyPhoneNumber2" enabled="false">
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
@@ -4101,7 +4101,7 @@ vars.put(&quot;test.faceImageUrl&quot;, &quot;${ext_previewUrl_selfie}&quot;);
             </ModuleController>
             <hashTree/>
           </hashTree>
-          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="9. registerUser" enabled="true">
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="9. registerUser" enabled="false">
             <boolProp name="TransactionController.parent">true</boolProp>
           </TransactionController>
           <hashTree>
