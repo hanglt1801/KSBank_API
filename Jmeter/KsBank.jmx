@@ -5530,6 +5530,177 @@
           </hashTree>
         </hashTree>
       </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="STM" enabled="false"/>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Nạp tiền" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API - Nạp tiền" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;transactionNo&quot;:&quot;${test.transactionNo}&quot;,&#xd;
+	&quot;transactionDate&quot;:&quot;${test.transactionDate}&quot;,&#xd;
+	&quot;stmId&quot;: &quot;${test.stmId}&quot;,&#xd;
+	&quot;fromCustomerName&quot;:&quot;${test.fromCustomerName}&quot;,&#xd;
+	&quot;fromCardNo&quot;:&quot;${test.fromCardNo}&quot;,&#xd;
+	&quot;isMyAcct&quot;:&quot;${test.isMyAcct}&quot;,&#xd;
+	&quot;toCk_AcctNbr&quot;:&quot;${test.toCk_AcctNbr}&quot;,&#xd;
+	&quot;tranAmount&quot;:&quot;${test.tranAmount}&quot;,&#xd;
+	&quot;descText&quot;:&quot;${test.descText}&quot;,&#xd;
+	&quot;action&quot;:&quot;${test.action}&quot;,&#xd;
+	&quot;partnerSigned&quot;:&quot;${test.partnerSigned}&quot;,&#xd;
+	&quot;createdDate&quot;:&quot;${test.createdDate}&quot;&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ksbapitest.kienlongbank.com</stringProp>
+            <stringProp name="HTTPSampler.port">2105</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">/fund-transfer/STM/KlbSTMDepositCash</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Rút tiền" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API - Rút tiền" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;transactionNo&quot;:&quot;${test.transactionNo}&quot;,&#xd;
+	&quot;transactionDate&quot;:&quot;${test.transactionDate}&quot;,&#xd;
+	&quot;accountNo&quot;: &quot;${test.accountNo}&quot;,&#xd;
+	&quot;fromCardNo&quot;:&quot;${test.fromCardNo}&quot;,&#xd;
+	&quot;transAmount&quot;:${test.transAmount},&#xd;
+	&quot;terminalId&quot;:&quot;${test.terminalId}&quot;,&#xd;
+	&quot;descText&quot;:&quot;${test.descText}&quot;,&#xd;
+	&quot;action&quot;:&quot;${test.action}&quot;,&#xd;
+	&quot;createdDate&quot;:&quot;${test.createdDate}&quot;,&#xd;
+	&quot;partnerSigned&quot;:&quot;${test.partnerSigned}&quot;&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ksbapitest.kienlongbank.com</stringProp>
+            <stringProp name="HTTPSampler.port">2105</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">/fund-transfer/STM/STM_WithDrawal</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Hàm Rev" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API - Hàm Rev" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;transactionNo&quot;:&quot;20220517175500&quot;,&#xd;
+	&quot;transactionDate&quot;:&quot;20220622 185000&quot;, &#xd;
+	&quot;accountNo&quot;: &quot;0000000002&quot;,&#xd;
+	&quot;fromCardNo&quot;: &quot;&quot;,&#xd;
+	&quot;transAmount&quot;: 5000000,&#xd;
+	&quot;feeAmt&quot;:550,&#xd;
+	&quot;wthRefNbr&quot;:&quot;217318213339&quot;,&#xd;
+	&quot;wthLocalDatetime&quot;:&quot;220622184820&quot;,&#xd;
+	&quot;terminalId&quot;: &quot;0901TM09&quot;,&#xd;
+	&quot;descText&quot;: &quot;tuanlng&quot;,&#xd;
+	&quot;rtxnNbr&quot;:&quot;000ZEXA220080ZIH&quot;,&#xd;
+	&quot;action&quot;: &quot;654&quot;,&#xd;
+	&quot;createdDate&quot;:&quot;22/06/2022 18:50:00&quot;,&#xd;
+	&quot;partnerSigned&quot;: &quot;test&quot;&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ksbapitest.kienlongbank.com</stringProp>
+            <stringProp name="HTTPSampler.port">2105</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">/fund-transfer/STM/STM_WithDrawal_Rev</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Mở thẻ" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API - Mở thẻ" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+    &quot;transactionDate&quot;: &quot;20220615 135434&quot;,&#xd;
+    &quot;bankCIF&quot;: &quot;000001350&quot;,&#xd;
+    &quot;branchCode&quot;:&quot;000&quot;,&#xd;
+    &quot;acCls&quot;:&quot;CAIV09&quot;,&#xd;
+    &quot;ccy&quot;:&quot;VND&quot;,   &#xd;
+    &quot;createdDate&quot;: &quot;23/06/2022 09:37:34&quot;,&#xd;
+    &quot;action&quot;: &quot;1000&quot;,&#xd;
+    &quot;partnerSigned&quot;: &quot;Check sign&quot;&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ksbapitest.kienlongbank.com</stringProp>
+            <stringProp name="HTTPSampler.port">2105</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">/account/STMAccount/Stm_KlbOpenCheckingAccount</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
       <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="Set Up Test Suite" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -5554,6 +5725,7 @@
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 import java.time.temporal.TemporalAdjusters;
+import java.text.SimpleDateFormat;
 // Ngày hiện tại
 LocalDate localDate = LocalDate.now();
 String today = DateTimeFormatter.ofPattern(&quot;dd/MM/yyyy&quot;).format(localDate);
@@ -5590,6 +5762,21 @@ props.put(&quot;firstDay&quot;,Day1 );
 LocalDate endOfMonth = LocalDate.now().with(TemporalAdjusters.lastDayOfMonth());
 String DayEOM = DateTimeFormatter.ofPattern(&quot;dd/MM/yyyy&quot;).format(endOfMonth);
 props.put(&quot;endDay&quot;,DayEOM );
+
+
+// STM
+ SimpleDateFormat dateFormat = new SimpleDateFormat(&quot;yyyyMMdd HHmmss&quot;);
+ String transactionDate_STM = dateFormat.format(new Date());
+ props.put(&quot;transactionDate_STM&quot;,transactionDate_STM );
+
+
+
+ SimpleDateFormat dateFormat1 = new SimpleDateFormat(&quot;dd/MM/yyyy HH:mm:ss&quot;);
+ String createdDate_STM = dateFormat1.format(new Date());
+ props.put(&quot;createdDate_STM&quot;,createdDate_STM );
+
+
+
 
 
 </stringProp>
@@ -6043,6 +6230,532 @@ vars.put(&quot;signatureHeaderPut&quot;, signaruteProps.getSignature(vars.get(&q
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="STM" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Nạp tiền - ${env}" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="1. Đăng nhập" enabled="true">
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname=" Đăng nhập" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Đăng nhập" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="224204364">Profile fragments</stringProp>
+                  <stringProp name="537638605">API - Singin</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="2. Lấy thông tin người dùng bank" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy thông tin người dùng bank" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy thông tin người dùng bank" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="224204364">Profile fragments</stringProp>
+                  <stringProp name="1137875685">API - profile - Get bank info</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - code" enabled="true">
+                <stringProp name="JSON_PATH">$.code</stringProp>
+                <stringProp name="EXPECTED_VALUE">200</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - true" enabled="true">
+                <stringProp name="JSON_PATH">$.success</stringProp>
+                <stringProp name="EXPECTED_VALUE">true</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - message" enabled="true">
+                <stringProp name="JSON_PATH">$.message</stringProp>
+                <stringProp name="EXPECTED_VALUE">Get user bank info success</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="3. Lấy thông tin chi tiết người dùng" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy thông tin chi tiết người dùng" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy thông tin chi tiết người dùng" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="224204364">Profile fragments</stringProp>
+                  <stringProp name="254255419">User query resource</stringProp>
+                  <stringProp name="-1841115920">API  - Lấy thông tin cho tiết người dùng</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - code" enabled="true">
+                <stringProp name="JSON_PATH">$.code</stringProp>
+                <stringProp name="EXPECTED_VALUE">200</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - true" enabled="true">
+                <stringProp name="JSON_PATH">$.success</stringProp>
+                <stringProp name="EXPECTED_VALUE">true</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - message" enabled="true">
+                <stringProp name="JSON_PATH">$.message</stringProp>
+                <stringProp name="EXPECTED_VALUE">Get user success</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - username - sdt đăng nhập" enabled="true">
+                <stringProp name="JSON_PATH">$.data.username</stringProp>
+                <stringProp name="EXPECTED_VALUE">${default_phone_number}</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="4. Lấy danh sách tài khoản thanh toán - Số dư trước khi nạp tiền" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="460914984">Smartbank fragments</stringProp>
+                  <stringProp name="-777923748">Account-controller</stringProp>
+                  <stringProp name="-599504706">API - /accounts - Lấy danh sách tài khoản thanh toán của user đăng nhập</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_accountNo0" enabled="true">
+                <stringProp name="VAR">ext_accountNo0</stringProp>
+                <stringProp name="JSONPATH">$.data.recordInfos[0].accountNo</stringProp>
+                <stringProp name="DEFAULT">error_ext_ext_accountNo0</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_smartbank_blance_before" enabled="true">
+                <stringProp name="VAR">ext_smartbank_blance_before</stringProp>
+                <stringProp name="JSONPATH">$.data.recordInfos[0].accountBalance</stringProp>
+                <stringProp name="DEFAULT">error_blance_before</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="5. Nạp tiền" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Chuẩn bị dữ liệu" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">vars.put(&quot;test.transactionNo&quot;, &quot;20220517175500&quot;);
+vars.put(&quot;test.transactionDate&quot;, props.get(&quot;transactionDate_STM&quot;));
+vars.put(&quot;test.stmId&quot;, &quot;0101TM01&quot;);
+vars.put(&quot;test.fromCustomerName&quot;, &quot;LE NGOC TUAN&quot;);
+vars.put(&quot;test.fromCardNo&quot;, &quot;9704528703945170995&quot;);
+vars.put(&quot;test.isMyAcct&quot;, &quot;1&quot;);
+vars.put(&quot;test.toCk_AcctNbr&quot;, &quot;${ext_accountNo0}&quot;);
+vars.put(&quot;test.tranAmount&quot;, &quot;1000000&quot;);
+vars.put(&quot;test.descText&quot;, &quot;Test&quot;);
+vars.put(&quot;test.action&quot;, &quot;655&quot;);
+vars.put(&quot;test.partnerSigned&quot;, &quot;xyz&quot;);
+vars.put(&quot;test.createdDate&quot;, props.get(&quot;createdDate_STM&quot;));
+
+
+
+</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Nạp tiền" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Nạp tiền" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="82444">STM</stringProp>
+                  <stringProp name="-1485553019">Nạp tiền</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="6. Lấy danh sách tài khoản thanh toán - Số dư sau khi nạp tiền" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="460914984">Smartbank fragments</stringProp>
+                  <stringProp name="-777923748">Account-controller</stringProp>
+                  <stringProp name="-599504706">API - /accounts - Lấy danh sách tài khoản thanh toán của user đăng nhập</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="Verify - balance" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">float  balance_before = Float.parseFloat(&quot;${ext_smartbank_blance_before}&quot;).floatValue(); // số tiền trược khi chuyển
+float  transfer_amount = Float.parseFloat(&quot;${test.amount}&quot;).floatValue();		// Số tiền chuyển	
+float  expected_amount = balance_before + transfer_amount;				// Kết quả số tiền mong muốn còn lại sau chuyển	
+float  actual_amount = Float.parseFloat(&quot;${ext_smartbank_balance_after}&quot;).floatValue();	  // Số tiền thực tế còn lại sau chuyển
+
+
+if(expected_amount != actual_amount){
+      AssertionResult.setFailure(true);  
+      AssertionResult.setFailureMessage(&quot;Sai thông tin số dư tài khoản sau thanh toán Expected amount = &quot;+expected_amount + &quot;Actual amount = &quot;+ actual_amount);
+}
+else{
+	AssertionResult.setFailure(false);  
+}
+</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223Assertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Rút tiền - ${env}" enabled="false">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">true</boolProp>
+        </TransactionController>
+        <hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="1. Đăng nhập" enabled="true">
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname=" Đăng nhập" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Đăng nhập" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="224204364">Profile fragments</stringProp>
+                  <stringProp name="537638605">API - Singin</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+                <collectionProp name="Asserion.test_strings">
+                  <stringProp name="49586">200</stringProp>
+                </collectionProp>
+                <stringProp name="Assertion.custom_message"></stringProp>
+                <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
+                <boolProp name="Assertion.assume_success">false</boolProp>
+                <intProp name="Assertion.test_type">16</intProp>
+              </ResponseAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="2. Lấy thông tin người dùng bank" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy thông tin người dùng bank" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy thông tin người dùng bank" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="224204364">Profile fragments</stringProp>
+                  <stringProp name="1137875685">API - profile - Get bank info</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - code" enabled="true">
+                <stringProp name="JSON_PATH">$.code</stringProp>
+                <stringProp name="EXPECTED_VALUE">200</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - true" enabled="true">
+                <stringProp name="JSON_PATH">$.success</stringProp>
+                <stringProp name="EXPECTED_VALUE">true</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - message" enabled="true">
+                <stringProp name="JSON_PATH">$.message</stringProp>
+                <stringProp name="EXPECTED_VALUE">Get user bank info success</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="3. Lấy thông tin chi tiết người dùng" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy thông tin chi tiết người dùng" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy thông tin chi tiết người dùng" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="224204364">Profile fragments</stringProp>
+                  <stringProp name="254255419">User query resource</stringProp>
+                  <stringProp name="-1841115920">API  - Lấy thông tin cho tiết người dùng</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - code" enabled="true">
+                <stringProp name="JSON_PATH">$.code</stringProp>
+                <stringProp name="EXPECTED_VALUE">200</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - true" enabled="true">
+                <stringProp name="JSON_PATH">$.success</stringProp>
+                <stringProp name="EXPECTED_VALUE">true</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - message" enabled="true">
+                <stringProp name="JSON_PATH">$.message</stringProp>
+                <stringProp name="EXPECTED_VALUE">Get user success</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - username - sdt đăng nhập" enabled="true">
+                <stringProp name="JSON_PATH">$.data.username</stringProp>
+                <stringProp name="EXPECTED_VALUE">${default_phone_number}</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="4. Lấy danh sách tài khoản thanh toán - Số dư trước khi nạp tiền" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="460914984">Smartbank fragments</stringProp>
+                  <stringProp name="-777923748">Account-controller</stringProp>
+                  <stringProp name="-599504706">API - /accounts - Lấy danh sách tài khoản thanh toán của user đăng nhập</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_accountNo0" enabled="true">
+                <stringProp name="VAR">ext_accountNo0</stringProp>
+                <stringProp name="JSONPATH">$.data.recordInfos[0].accountNo</stringProp>
+                <stringProp name="DEFAULT">error_ext_ext_accountNo0</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_smartbank_blance_before" enabled="true">
+                <stringProp name="VAR">ext_smartbank_blance_before</stringProp>
+                <stringProp name="JSONPATH">$.data.recordInfos[0].accountBalance</stringProp>
+                <stringProp name="DEFAULT">error_blance_before</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="5. Rút tiền" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Chuẩn bị dữ liệu" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">vars.put(&quot;test.transactionNo&quot;, &quot;20220517175500&quot;);
+vars.put(&quot;test.transactionDate&quot;, &quot;20220622 183000&quot;);
+vars.put(&quot;test.accountNo&quot;, &quot;${ext_accountNo0}&quot;);
+vars.put(&quot;test.fromCardNo&quot;, &quot;9704528703945170995&quot;);
+vars.put(&quot;test.tranAmount&quot;, &apos;1000000&apos;);
+vars.put(&quot;test.terminalId&quot;, &quot;0901TM09&quot;);
+vars.put(&quot;test.descText&quot;, &quot;descText&quot;);
+vars.put(&quot;test.action&quot;, &quot;653&quot;);
+vars.put(&quot;test.createdDate&quot;, &quot;22/06/2022 18:47:00&quot;);
+vars.put(&quot;test.partnerSigned&quot;, &quot;test&quot;);
+</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Rút tiền" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Rút tiền" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="82444">STM</stringProp>
+                  <stringProp name="-1226484714">Rút tiền</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="6. Lấy danh sách tài khoản thanh toán - Số dư sau khi nạp tiền" enabled="true">
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+            <boolProp name="TransactionController.parent">true</boolProp>
+          </TransactionController>
+          <hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true"/>
+            <hashTree>
+              <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Danh sách tài khoản thanh toán, số dư trước thanh toán" enabled="true">
+                <collectionProp name="ModuleController.node_path">
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="764597751">Test Plan</stringProp>
+                  <stringProp name="460914984">Smartbank fragments</stringProp>
+                  <stringProp name="-777923748">Account-controller</stringProp>
+                  <stringProp name="-599504706">API - /accounts - Lấy danh sách tài khoản thanh toán của user đăng nhập</stringProp>
+                </collectionProp>
+              </ModuleController>
+              <hashTree/>
+              <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="Verify - balance" enabled="true">
+                <stringProp name="cacheKey">true</stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="script">float  balance_before = Float.parseFloat(&quot;${ext_smartbank_blance_before}&quot;).floatValue(); // số tiền trược khi chuyển
+float  transfer_amount = Float.parseFloat(&quot;${test.amount}&quot;).floatValue();		// Số tiền chuyển	
+float  expected_amount = balance_before + transfer_amount;				// Kết quả số tiền mong muốn còn lại sau chuyển	
+float  actual_amount = Float.parseFloat(&quot;${ext_smartbank_balance_after}&quot;).floatValue();	  // Số tiền thực tế còn lại sau chuyển
+
+
+if(expected_amount != actual_amount){
+      AssertionResult.setFailure(true);  
+      AssertionResult.setFailureMessage(&quot;Sai thông tin số dư tài khoản sau thanh toán Expected amount = &quot;+expected_amount + &quot;Actual amount = &quot;+ actual_amount);
+}
+else{
+	AssertionResult.setFailure(false);  
+}
+</stringProp>
+                <stringProp name="scriptLanguage">groovy</stringProp>
+              </JSR223Assertion>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+      </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Đăng ký" enabled="false">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
@@ -6067,7 +6780,7 @@ vars.put(&quot;signatureHeaderPut&quot;, signaruteProps.getSignature(vars.get(&q
             <stringProp name="parameters"></stringProp>
             <stringProp name="filename"></stringProp>
             <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="script">vars.put(&quot;test.username&quot;, &quot;0932324886&quot;); // Số điện thoại đăng ký
+            <stringProp name="script">vars.put(&quot;test.username&quot;, &quot;0363374697&quot;); // Số điện thoại đăng ký
 vars.put(&quot;test.udid&quot;,&quot;b10caf31da6a60ad&quot;); // Mã UDID của thiết bị
 vars.put(&quot;test.otp&quot;,&quot;${test.otp_default}&quot;); </stringProp>
           </JSR223Sampler>
@@ -14745,7 +15458,7 @@ vars.put(&quot;test.toDate&quot;,today);
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Thông tin cá nhân" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Thông tin cá nhân - ${env}" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -17520,7 +18233,7 @@ vars.put(&quot;test.accountNo&quot;, &quot;35503113&quot;);	//Mã cif của user
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Đến tài khoản KLB - Cùng CIF" enabled="false">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Đến tài khoản KLB - Cùng CIF" enabled="true">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -17627,6 +18340,26 @@ vars.put(&quot;test.amount&quot;, &quot;15000&quot;);// Số tiền chuyển
                 <stringProp name="SUBJECT">BODY</stringProp>
                 <stringProp name="INPUT_FORMAT">JSON</stringProp>
               </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion code" enabled="true">
+                <stringProp name="JSON_PATH">$.code</stringProp>
+                <stringProp name="EXPECTED_VALUE">200</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
+                <stringProp name="JSON_PATH">$.message</stringProp>
+                <stringProp name="EXPECTED_VALUE">Success</stringProp>
+                <boolProp name="JSONVALIDATION">true</boolProp>
+                <boolProp name="EXPECT_NULL">false</boolProp>
+                <boolProp name="INVERT">false</boolProp>
+                <boolProp name="ISREGEX">false</boolProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
               <hashTree/>
             </hashTree>
           </hashTree>
@@ -26259,7 +26992,7 @@ vars.put(&quot;test.accountNo&quot;, &quot;${ext_accountNo0}&quot;);	//Mã cif c
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Tài khoản Nội Bộ: Danh sách, Thêm, Sửa, Xóa" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Tài khoản Nội Bộ: Danh sách, Thêm, Sửa, Xóa" enabled="false">
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
         <hashTree>
@@ -27301,7 +28034,7 @@ vars.put(&quot;test.updateDt&quot;,todayDateTime);		</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Thẻ Liên ngân hàng : Danh sách, Thêm, Sửa, Xóa" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Thẻ Liên ngân hàng : Danh sách, Thêm, Sửa, Xóa" enabled="false">
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
         <hashTree>
@@ -27827,7 +28560,7 @@ vars.put(&quot;test.updateDt&quot;,todayDateTime);		</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Thẻ Nội bộ: Danh sách, Thêm, Sửa, Xóa" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Thẻ Nội bộ: Danh sách, Thêm, Sửa, Xóa" enabled="false">
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
         <hashTree>
@@ -30947,7 +31680,7 @@ vars.put(&quot;test.amount&quot;, &quot;${test.res_purchasingPrice_csv}&quot;);<
                   <boolProp name="TransactionController.parent">true</boolProp>
                 </TransactionController>
                 <hashTree>
-                  <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname=" 1. Lấy danh sách tài khoản thanh toán, số dư sau thanh toán" enabled="true">
+                  <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="1. Lấy danh sách tài khoản thanh toán, số dư sau thanh toán" enabled="true">
                     <boolProp name="TransactionController.includeTimers">false</boolProp>
                     <boolProp name="TransactionController.parent">true</boolProp>
                   </TransactionController>
@@ -31263,7 +31996,7 @@ vars.put(&quot;test.toDate&quot;,today);
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Nạp tiền - Nạp tiền điện thoại" enabled="false">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Nạp tiền - Nạp tiền điện thoại" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
@@ -31277,7 +32010,7 @@ vars.put(&quot;test.toDate&quot;,today);
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Nạp tiền - Nạp tiền điện thoại" enabled="false">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Nạp tiền - Nạp tiền điện thoại - ${env}" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
         <hashTree>
@@ -31343,6 +32076,15 @@ vars.put(&quot;test.toDate&quot;,today);
                   <stringProp name="-599504706">API - /accounts - Lấy danh sách tài khoản thanh toán của user đăng nhập</stringProp>
                 </collectionProp>
               </ModuleController>
+              <hashTree/>
+              <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_accountNo0" enabled="true">
+                <stringProp name="VAR">ext_accountNo0</stringProp>
+                <stringProp name="JSONPATH">$.data.recordInfos[0].accountNo</stringProp>
+                <stringProp name="DEFAULT">error_ext_ext_accountNo0</stringProp>
+                <stringProp name="VARIABLE"></stringProp>
+                <stringProp name="SUBJECT">BODY</stringProp>
+                <stringProp name="INPUT_FORMAT">JSON</stringProp>
+              </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
               <hashTree/>
               <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_smartbank_blance_before" enabled="true">
                 <stringProp name="VAR">ext_smartbank_blance_before</stringProp>
@@ -31522,7 +32264,7 @@ vars.put(&quot;test.tele_info&quot;, &quot;${ext_teleProvider}&quot;);</stringPr
 vars.put(&quot;test.provider&quot;, &quot;${ext_teleProvider}&quot;);
 vars.put(&quot;test.cardValue&quot;,&quot;${ext_cardValue}&quot;);
 vars.put(&quot;test.bankCif&quot;,&quot;${ext_profile_bank_cifNumber}&quot;);
-vars.put(&quot;test.accountNo&quot;,&quot;${ext_accountNo1}&quot;);
+vars.put(&quot;test.accountNo&quot;,&quot;${ext_accountNo0}&quot;);
 vars.put(&quot;test.otp&quot;,&quot;${test.otp_default}&quot;);
 vars.put(&quot;test.topupType&quot;,&quot;PREPAID&quot;);
 </stringProp>
@@ -31679,7 +32421,7 @@ else{
 def minusDays7 = props.get(&quot;minusDays7&quot;);
 
 vars.put(&quot;test.bankCif&quot;, &quot;${ext_profile_bank_cifNumber}&quot;);
-vars.put(&quot;test.accountNo&quot;,&quot;${ext_accountNo1}&quot;);
+vars.put(&quot;test.accountNo&quot;,&quot;${ext_accountNo0}&quot;);
 vars.put(&quot;test.accountType&quot;, &quot;1&quot;);
 vars.put(&quot;test.fromDate&quot;,minusDays7);
 vars.put(&quot;test.toDate&quot;,today);
@@ -31821,7 +32563,7 @@ vars.put(&quot;test.toDate&quot;,today);
             </hashTree>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Loop - Nạp tiền điện thoại" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Loop - Nạp tiền điện thoại" enabled="false"/>
         <hashTree>
           <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop case - Regesstion Test" enabled="true">
             <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -31829,7 +32571,7 @@ vars.put(&quot;test.toDate&quot;,today);
           </LoopController>
           <hashTree>
             <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-              <stringProp name="filename">DataDriven/SmartBank/PhoneCard/KLB_PhoneCard.csv</stringProp>
+              <stringProp name="filename">DataDriven/SmartBank/PhoneCard/KLB_PhoneTopup.csv</stringProp>
               <stringProp name="fileEncoding">UTF-8</stringProp>
               <stringProp name="variableNames"></stringProp>
               <stringProp name="delimiter">,</stringProp>
@@ -31840,7 +32582,7 @@ vars.put(&quot;test.toDate&quot;,today);
               <boolProp name="ignoreFirstLine">true</boolProp>
             </CSVDataSet>
             <hashTree/>
-            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Mua tất thẻ của tất cả nhà mạng, tất cả mệnh giá" enabled="true">
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="Nạp tiền điện thoại của tất cả nhà mạng, tất cả mệnh giá" enabled="true">
               <stringProp name="IfController.condition">&quot;${groupcase}&quot; == &quot;successCase&quot;</stringProp>
               <boolProp name="IfController.evaluateAll">false</boolProp>
             </IfController>
@@ -31850,6 +32592,15 @@ vars.put(&quot;test.toDate&quot;,today);
                 <boolProp name="TransactionController.parent">true</boolProp>
               </TransactionController>
               <hashTree>
+                <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Chuẩn bị data" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey">false</stringProp>
+                  <stringProp name="script">vars.put(&quot;test.phoneNo&quot;,&quot;${test.phone_no_csv}&quot;);
+</stringProp>
+                </JSR223Sampler>
+                <hashTree/>
                 <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="1. Đăng nhập " enabled="true">
                   <boolProp name="TransactionController.includeTimers">false</boolProp>
                   <boolProp name="TransactionController.parent">true</boolProp>
@@ -31975,26 +32726,26 @@ vars.put(&quot;test.toDate&quot;,today);
                     <hashTree/>
                   </hashTree>
                 </hashTree>
-                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="3. Lấy danh sách nhà cung cấp và mệnh giá" enabled="true">
+                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="3. Lấy danh sách các mệnh giá" enabled="true">
                   <boolProp name="TransactionController.includeTimers">false</boolProp>
                   <boolProp name="TransactionController.parent">true</boolProp>
                 </TransactionController>
                 <hashTree>
-                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy danh sách nhà cung cấp và mệnh giá" enabled="true"/>
+                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy danh sách các mệnh giá" enabled="true"/>
                   <hashTree>
-                    <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy danh sách nhà cung cấp và mệnh giá" enabled="true">
+                    <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy danh sách các mệnh giá" enabled="true">
                       <collectionProp name="ModuleController.node_path">
                         <stringProp name="764597751">Test Plan</stringProp>
                         <stringProp name="764597751">Test Plan</stringProp>
                         <stringProp name="460914984">Smartbank fragments</stringProp>
-                        <stringProp name="93764602">Phone-card-controller</stringProp>
-                        <stringProp name="294339069">API - /phone-cards/v1/providers - Lấy danh sách nhà cung và mệnh giá thẻ</stringProp>
+                        <stringProp name="936269654">Invoice Management</stringProp>
+                        <stringProp name="-1698691323">API - /invoice/v1/services - Lấy danh sách mệnh giá được hỗ trợ</stringProp>
                       </collectionProp>
                     </ModuleController>
                     <hashTree/>
                     <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion code" enabled="true">
                       <stringProp name="JSON_PATH">$.code</stringProp>
-                      <stringProp name="EXPECTED_VALUE">2000000</stringProp>
+                      <stringProp name="EXPECTED_VALUE">200</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32004,7 +32755,7 @@ vars.put(&quot;test.toDate&quot;,today);
                     <hashTree/>
                     <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
                       <stringProp name="JSON_PATH">$.message</stringProp>
-                      <stringProp name="EXPECTED_VALUE">Thực hiện thành công</stringProp>
+                      <stringProp name="EXPECTED_VALUE">Success</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32012,19 +32763,18 @@ vars.put(&quot;test.toDate&quot;,today);
                       <stringProp name="INPUT_FORMAT">JSON</stringProp>
                     </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                     <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
-                      <stringProp name="JSON_PATH">$.success</stringProp>
-                      <stringProp name="EXPECTED_VALUE">true</stringProp>
-                      <boolProp name="JSONVALIDATION">true</boolProp>
-                      <boolProp name="EXPECT_NULL">false</boolProp>
-                      <boolProp name="INVERT">false</boolProp>
-                      <boolProp name="ISREGEX">false</boolProp>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_teleProvider" enabled="true">
+                      <stringProp name="VAR">ext_teleProvider</stringProp>
+                      <stringProp name="JSONPATH">$.data.teleProvider</stringProp>
+                      <stringProp name="DEFAULT">error_ext_teleProvider</stringProp>
+                      <stringProp name="VARIABLE"></stringProp>
+                      <stringProp name="SUBJECT">BODY</stringProp>
                       <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
                     <hashTree/>
                   </hashTree>
                 </hashTree>
-                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="4. Lấy số tiền cần phải thanh toán thẻ" enabled="true">
+                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="4. Lấy thông tin thanh toán" enabled="true">
                   <boolProp name="TransactionController.includeTimers">false</boolProp>
                   <boolProp name="TransactionController.parent">true</boolProp>
                 </TransactionController>
@@ -32034,28 +32784,25 @@ vars.put(&quot;test.toDate&quot;,today);
                     <stringProp name="parameters"></stringProp>
                     <stringProp name="filename"></stringProp>
                     <stringProp name="cacheKey">false</stringProp>
-                    <stringProp name="script">vars.put(&quot;test.provider&quot;, &quot;${test.provider_csv}&quot;); // Nhà cung cấp
-vars.put(&quot;test.cardValue&quot;,&quot;${test.cardValue_csv}&quot;); // Giá trị của thẻ nạp
-vars.put(&quot;test.quantity&quot;,&apos;${test.quantity_csv}&apos;); // Số lượng thẻ muốn mua
-
-</stringProp>
+                    <stringProp name="script">vars.put(&quot;test.cifNo&quot;, &quot;${ext_profile_bank_cifNumber}&quot;);
+vars.put(&quot;test.tele_info&quot;, &quot;${test.provider_csv}&quot;);</stringProp>
                   </JSR223Sampler>
                   <hashTree/>
-                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy số tiền cần phải thanh toán thẻ" enabled="true"/>
+                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy thông tin thanh toán" enabled="true"/>
                   <hashTree>
-                    <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy số tiền cần phải thanh toán thẻ" enabled="true">
+                    <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy thông tin thanh toán" enabled="true">
                       <collectionProp name="ModuleController.node_path">
                         <stringProp name="764597751">Test Plan</stringProp>
                         <stringProp name="764597751">Test Plan</stringProp>
                         <stringProp name="460914984">Smartbank fragments</stringProp>
-                        <stringProp name="93764602">Phone-card-controller</stringProp>
-                        <stringProp name="-928835813">API - /phone-cards/v1/price - Lấy số tiền cần phải thanh toán thẻ</stringProp>
+                        <stringProp name="936269654">Invoice Management</stringProp>
+                        <stringProp name="995884967">API - /invoice/v1/topup-values/{id} - Thanh toán 1 thẻ điện thoại bằng Topup</stringProp>
                       </collectionProp>
                     </ModuleController>
                     <hashTree/>
                     <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion code" enabled="true">
                       <stringProp name="JSON_PATH">$.code</stringProp>
-                      <stringProp name="EXPECTED_VALUE">2000000</stringProp>
+                      <stringProp name="EXPECTED_VALUE">200</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32065,7 +32812,7 @@ vars.put(&quot;test.quantity&quot;,&apos;${test.quantity_csv}&apos;); // Số l�
                     <hashTree/>
                     <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
                       <stringProp name="JSON_PATH">$.message</stringProp>
-                      <stringProp name="EXPECTED_VALUE">Thực hiện thành công</stringProp>
+                      <stringProp name="EXPECTED_VALUE">Success</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32073,9 +32820,71 @@ vars.put(&quot;test.quantity&quot;,&apos;${test.quantity_csv}&apos;); // Số l�
                       <stringProp name="INPUT_FORMAT">JSON</stringProp>
                     </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                     <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion -success" enabled="true">
-                      <stringProp name="JSON_PATH">$.success</stringProp>
-                      <stringProp name="EXPECTED_VALUE">true</stringProp>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_cardValue" enabled="true">
+                      <stringProp name="VAR">ext_cardValue</stringProp>
+                      <stringProp name="JSONPATH">$.data[0].cardValue</stringProp>
+                      <stringProp name="DEFAULT">error_cardValue</stringProp>
+                      <stringProp name="VARIABLE"></stringProp>
+                      <stringProp name="SUBJECT">BODY</stringProp>
+                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
+                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+                    <hashTree/>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_purchasingPrice" enabled="true">
+                      <stringProp name="VAR">ext_purchasingPrice</stringProp>
+                      <stringProp name="JSONPATH">$.data[0].purchasingPrice</stringProp>
+                      <stringProp name="DEFAULT">error_purchasingPrice</stringProp>
+                      <stringProp name="VARIABLE"></stringProp>
+                      <stringProp name="SUBJECT">BODY</stringProp>
+                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
+                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
+                    <hashTree/>
+                  </hashTree>
+                </hashTree>
+                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="5. Thanh toán " enabled="true">
+                  <boolProp name="TransactionController.includeTimers">false</boolProp>
+                  <boolProp name="TransactionController.parent">true</boolProp>
+                </TransactionController>
+                <hashTree>
+                  <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Chuẩn bị data" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey">false</stringProp>
+                    <stringProp name="script">vars.put(&quot;test.cifNo&quot;, &quot;${ext_profile_bank_cifNumber}&quot;);
+vars.put(&quot;test.provider&quot;, &quot;${ext_teleProvider}&quot;);
+vars.put(&quot;test.cardValue&quot;,&quot;${ext_cardValue}&quot;);
+vars.put(&quot;test.bankCif&quot;,&quot;${ext_profile_bank_cifNumber}&quot;);
+vars.put(&quot;test.accountNo&quot;,&quot;${ext_accountNo0}&quot;);
+vars.put(&quot;test.otp&quot;,&quot;${test.otp_default}&quot;);
+vars.put(&quot;test.topupType&quot;,&quot;PREPAID&quot;);
+</stringProp>
+                  </JSR223Sampler>
+                  <hashTree/>
+                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Thanh toán" enabled="true"/>
+                  <hashTree>
+                    <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Thanh toán" enabled="true">
+                      <collectionProp name="ModuleController.node_path">
+                        <stringProp name="764597751">Test Plan</stringProp>
+                        <stringProp name="764597751">Test Plan</stringProp>
+                        <stringProp name="460914984">Smartbank fragments</stringProp>
+                        <stringProp name="936269654">Invoice Management</stringProp>
+                        <stringProp name="-1632538186">API - /invoice/v1/topup-values/{id} - Thanh toán nạp tiền điện thoại</stringProp>
+                      </collectionProp>
+                    </ModuleController>
+                    <hashTree/>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion code" enabled="true">
+                      <stringProp name="JSON_PATH">$.code</stringProp>
+                      <stringProp name="EXPECTED_VALUE">200</stringProp>
+                      <boolProp name="JSONVALIDATION">true</boolProp>
+                      <boolProp name="EXPECT_NULL">false</boolProp>
+                      <boolProp name="INVERT">false</boolProp>
+                      <boolProp name="ISREGEX">false</boolProp>
+                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
+                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                    <hashTree/>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
+                      <stringProp name="JSON_PATH">$.message</stringProp>
+                      <stringProp name="EXPECTED_VALUE">Success</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32084,8 +32893,8 @@ vars.put(&quot;test.quantity&quot;,&apos;${test.quantity_csv}&apos;); // Số l�
                     </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                     <hashTree/>
                     <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - purchasingPrice" enabled="true">
-                      <stringProp name="JSON_PATH">$.data.purchasingPrice</stringProp>
-                      <stringProp name="EXPECTED_VALUE">${test.res_purchasingPrice_csv}</stringProp>
+                      <stringProp name="JSON_PATH">$.data.amount</stringProp>
+                      <stringProp name="EXPECTED_VALUE">${ext_purchasingPrice}</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32093,40 +32902,9 @@ vars.put(&quot;test.quantity&quot;,&apos;${test.quantity_csv}&apos;); // Số l�
                       <stringProp name="INPUT_FORMAT">JSON</stringProp>
                     </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                     <hashTree/>
-                  </hashTree>
-                </hashTree>
-                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="5. Thanh toán - Mua thẻ" enabled="true">
-                  <boolProp name="TransactionController.includeTimers">false</boolProp>
-                  <boolProp name="TransactionController.parent">true</boolProp>
-                </TransactionController>
-                <hashTree>
-                  <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Chuẩn bị data" enabled="true">
-                    <stringProp name="scriptLanguage">groovy</stringProp>
-                    <stringProp name="parameters"></stringProp>
-                    <stringProp name="filename"></stringProp>
-                    <stringProp name="cacheKey">false</stringProp>
-                    <stringProp name="script">vars.put(&quot;test.otp&quot;,&quot;${test.otp_default}&quot;);
-vars.put(&quot;test.accountNo&quot;,&quot;${ext_accountNo0}&quot;);
-vars.put(&quot;test.cardValue&quot;,&apos;${test.cardValue}&apos;);
-vars.put(&quot;test.provider&quot;, &quot;${test.provider}&quot;);
-vars.put(&quot;test.amount&quot;, &quot;${test.res_purchasingPrice_csv}&quot;);</stringProp>
-                  </JSR223Sampler>
-                  <hashTree/>
-                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Thanh toán - Mua thẻ" enabled="true"/>
-                  <hashTree>
-                    <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Thanh toán - Mua thẻ" enabled="true">
-                      <collectionProp name="ModuleController.node_path">
-                        <stringProp name="764597751">Test Plan</stringProp>
-                        <stringProp name="764597751">Test Plan</stringProp>
-                        <stringProp name="460914984">Smartbank fragments</stringProp>
-                        <stringProp name="93764602">Phone-card-controller</stringProp>
-                        <stringProp name="128263529">API -  ​/phone-cards​/v1​/payment -  Mua thẻ</stringProp>
-                      </collectionProp>
-                    </ModuleController>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion code" enabled="true">
-                      <stringProp name="JSON_PATH">$.code</stringProp>
-                      <stringProp name="EXPECTED_VALUE">2000000</stringProp>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - accountNo" enabled="true">
+                      <stringProp name="JSON_PATH">$.data.accountNo</stringProp>
+                      <stringProp name="EXPECTED_VALUE">${test.accountNo}</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32134,9 +32912,9 @@ vars.put(&quot;test.amount&quot;, &quot;${test.res_purchasingPrice_csv}&quot;);<
                       <stringProp name="INPUT_FORMAT">JSON</stringProp>
                     </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                     <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
-                      <stringProp name="JSON_PATH">$.message</stringProp>
-                      <stringProp name="EXPECTED_VALUE">Thực hiện thành công</stringProp>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - customerCode" enabled="true">
+                      <stringProp name="JSON_PATH">$.data.customerCode</stringProp>
+                      <stringProp name="EXPECTED_VALUE">${test.phoneNo}</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32144,9 +32922,9 @@ vars.put(&quot;test.amount&quot;, &quot;${test.res_purchasingPrice_csv}&quot;);<
                       <stringProp name="INPUT_FORMAT">JSON</stringProp>
                     </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                     <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
-                      <stringProp name="JSON_PATH">$.success</stringProp>
-                      <stringProp name="EXPECTED_VALUE">true</stringProp>
+                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - supplierCode" enabled="true">
+                      <stringProp name="JSON_PATH">$.data.supplierCode</stringProp>
+                      <stringProp name="EXPECTED_VALUE">${ext_teleProvider}</stringProp>
                       <boolProp name="JSONVALIDATION">true</boolProp>
                       <boolProp name="EXPECT_NULL">false</boolProp>
                       <boolProp name="INVERT">false</boolProp>
@@ -32163,115 +32941,9 @@ vars.put(&quot;test.amount&quot;, &quot;${test.res_purchasingPrice_csv}&quot;);<
                       <stringProp name="INPUT_FORMAT">JSON</stringProp>
                     </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
                     <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_cardId" enabled="true">
-                      <stringProp name="VAR">ext_cardId</stringProp>
-                      <stringProp name="JSONPATH">$.data.paidPhoneCards[0].cardId</stringProp>
-                      <stringProp name="DEFAULT">error_cardId</stringProp>
-                      <stringProp name="VARIABLE"></stringProp>
-                      <stringProp name="SUBJECT">BODY</stringProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_seriNumber" enabled="true">
-                      <stringProp name="VAR">ext_seriNumber</stringProp>
-                      <stringProp name="JSONPATH">$.data.paidPhoneCards[0].seriNumber</stringProp>
-                      <stringProp name="DEFAULT">error_seriNumber</stringProp>
-                      <stringProp name="VARIABLE"></stringProp>
-                      <stringProp name="SUBJECT">BODY</stringProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_cardValue" enabled="true">
-                      <stringProp name="VAR">ext_cardValue</stringProp>
-                      <stringProp name="JSONPATH">$.data.paidPhoneCards[0].cardValue</stringProp>
-                      <stringProp name="DEFAULT">error_cardValue</stringProp>
-                      <stringProp name="VARIABLE"></stringProp>
-                      <stringProp name="SUBJECT">BODY</stringProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
-                    <hashTree/>
                   </hashTree>
                 </hashTree>
-                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="6. Lấy danh sách thẻ đã mua" enabled="true">
-                  <boolProp name="TransactionController.includeTimers">false</boolProp>
-                  <boolProp name="TransactionController.parent">true</boolProp>
-                </TransactionController>
-                <hashTree>
-                  <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Lấy danh sách thẻ đã mua" enabled="true"/>
-                  <hashTree>
-                    <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Lấy danh sách thẻ đã mua" enabled="true">
-                      <collectionProp name="ModuleController.node_path">
-                        <stringProp name="764597751">Test Plan</stringProp>
-                        <stringProp name="764597751">Test Plan</stringProp>
-                        <stringProp name="460914984">Smartbank fragments</stringProp>
-                        <stringProp name="93764602">Phone-card-controller</stringProp>
-                        <stringProp name="-1834448723">API -  ​/phone-cards/v1/histories - Lấy lịch sử mua mã thẻ</stringProp>
-                      </collectionProp>
-                    </ModuleController>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion message" enabled="true">
-                      <stringProp name="JSON_PATH">$.message</stringProp>
-                      <stringProp name="EXPECTED_VALUE">Thực hiện thành công</stringProp>
-                      <boolProp name="JSONVALIDATION">true</boolProp>
-                      <boolProp name="EXPECT_NULL">false</boolProp>
-                      <boolProp name="INVERT">false</boolProp>
-                      <boolProp name="ISREGEX">false</boolProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion code" enabled="true">
-                      <stringProp name="JSON_PATH">$.code</stringProp>
-                      <stringProp name="EXPECTED_VALUE">2000000</stringProp>
-                      <boolProp name="JSONVALIDATION">true</boolProp>
-                      <boolProp name="EXPECT_NULL">false</boolProp>
-                      <boolProp name="INVERT">false</boolProp>
-                      <boolProp name="ISREGEX">false</boolProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion success" enabled="true">
-                      <stringProp name="JSON_PATH">$.success</stringProp>
-                      <stringProp name="EXPECTED_VALUE">true</stringProp>
-                      <boolProp name="JSONVALIDATION">true</boolProp>
-                      <boolProp name="EXPECT_NULL">false</boolProp>
-                      <boolProp name="INVERT">false</boolProp>
-                      <boolProp name="ISREGEX">false</boolProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion cardValue" enabled="true">
-                      <stringProp name="JSON_PATH">$.data.content[0].cardValue</stringProp>
-                      <stringProp name="EXPECTED_VALUE">${ext_cardValue}</stringProp>
-                      <boolProp name="JSONVALIDATION">true</boolProp>
-                      <boolProp name="EXPECT_NULL">false</boolProp>
-                      <boolProp name="INVERT">false</boolProp>
-                      <boolProp name="ISREGEX">false</boolProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion seriNumber" enabled="true">
-                      <stringProp name="JSON_PATH">$.data.content[0].seriNumber</stringProp>
-                      <stringProp name="EXPECTED_VALUE">${ext_seriNumber}</stringProp>
-                      <boolProp name="JSONVALIDATION">true</boolProp>
-                      <boolProp name="EXPECT_NULL">false</boolProp>
-                      <boolProp name="INVERT">false</boolProp>
-                      <boolProp name="ISREGEX">false</boolProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                    <hashTree/>
-                    <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion cardId" enabled="true">
-                      <stringProp name="JSON_PATH">$.data.content[0].cardId</stringProp>
-                      <stringProp name="EXPECTED_VALUE">${ext_cardId}</stringProp>
-                      <boolProp name="JSONVALIDATION">true</boolProp>
-                      <boolProp name="EXPECT_NULL">false</boolProp>
-                      <boolProp name="INVERT">false</boolProp>
-                      <boolProp name="ISREGEX">false</boolProp>
-                      <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                    </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                    <hashTree/>
-                  </hashTree>
-                </hashTree>
-                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="7. Lịch sử thanh toán, số dư sau thanh toán" enabled="true">
+                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="6. Lịch sử thanh toán, số dư sau thanh toán" enabled="true">
                   <boolProp name="TransactionController.includeTimers">false</boolProp>
                   <boolProp name="TransactionController.parent">true</boolProp>
                 </TransactionController>
@@ -32307,14 +32979,10 @@ vars.put(&quot;test.amount&quot;, &quot;${test.res_purchasingPrice_csv}&quot;);<
                         <stringProp name="filename"></stringProp>
                         <stringProp name="parameters"></stringProp>
                         <stringProp name="script">float  balance_before = Float.parseFloat(&quot;${ext_smartbank_blance_before}&quot;).floatValue(); // số tiền trược khi chuyển
-float  transfer_amount = Float.parseFloat(&quot;${test.amount}&quot;).floatValue();		// Số tiền chuyển	
+float  transfer_amount = Float.parseFloat(&apos;${ext_amount}&apos;).floatValue();		// Số tiền chuyển	
 float  expected_amount = balance_before - transfer_amount;				// Kết quả số tiền mong muốn còn lại sau chuyển	
 float  actual_amount = Float.parseFloat(&quot;${ext_smartbank_balance_after}&quot;).floatValue();	  // Số tiền thực tế còn lại sau chuyển
-log.info(&quot;TC - ${test.id} - ${test.objective}&quot;);
-log.info(&quot;Số tiền trước thanh toán        : &quot;+ balance_before);
-log.info(&quot;Số tiền thanh toán              : &quot;+ transfer_amount);
-log.info(&quot;Số tiền thực tế sau thanh toán  : &quot;+ actual_amount);
-log.info(&quot;Số tiền mong muốn sau thanh toán: &quot;+ expected_amount);
+
 
 if(expected_amount != actual_amount){
       AssertionResult.setFailure(true);  
@@ -32384,6 +33052,16 @@ vars.put(&quot;test.toDate&quot;,today);
                         <stringProp name="INPUT_FORMAT">JSON</stringProp>
                       </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                       <hashTree/>
+                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion Amount" enabled="false">
+                        <stringProp name="JSON_PATH">$.data.recordInfos[0].amount</stringProp>
+                        <stringProp name="EXPECTED_VALUE">${ext_purchasingPrice}</stringProp>
+                        <boolProp name="JSONVALIDATION">true</boolProp>
+                        <boolProp name="EXPECT_NULL">false</boolProp>
+                        <boolProp name="INVERT">false</boolProp>
+                        <boolProp name="ISREGEX">false</boolProp>
+                        <stringProp name="INPUT_FORMAT">JSON</stringProp>
+                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
+                      <hashTree/>
                       <com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.gui.JSONPathExtractorGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor" testname="JSON Path Extractor - ext_refTransactionNo" enabled="true">
                         <stringProp name="VAR">ext_refTransactionNo</stringProp>
                         <stringProp name="JSONPATH">$.data.recordInfos[0].refTransactionNo</stringProp>
@@ -32442,9 +33120,9 @@ vars.put(&quot;test.toDate&quot;,today);
                         <stringProp name="INPUT_FORMAT">JSON</stringProp>
                       </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                       <hashTree/>
-                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion phoneCardValue" enabled="true">
-                        <stringProp name="JSON_PATH">$.data.phoneCardValue</stringProp>
-                        <stringProp name="EXPECTED_VALUE">${test.cardValue}</stringProp>
+                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion Amount" enabled="false">
+                        <stringProp name="JSON_PATH">$.data.amount</stringProp>
+                        <stringProp name="EXPECTED_VALUE">${ext_purchasingPrice}</stringProp>
                         <boolProp name="JSONVALIDATION">true</boolProp>
                         <boolProp name="EXPECT_NULL">false</boolProp>
                         <boolProp name="INVERT">false</boolProp>
@@ -32460,129 +33138,6 @@ vars.put(&quot;test.toDate&quot;,today);
                         <stringProp name="SUBJECT">BODY</stringProp>
                         <stringProp name="INPUT_FORMAT">JSON</stringProp>
                       </com.atlantbh.jmeter.plugins.jsonutils.jsonpathextractor.JSONPathExtractor>
-                      <hashTree/>
-                    </hashTree>
-                  </hashTree>
-                </hashTree>
-                <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="8. Đăng xuất" enabled="true">
-                  <boolProp name="TransactionController.parent">true</boolProp>
-                </TransactionController>
-                <hashTree>
-                  <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="1. Xóa playerID khi ấn nút đăng xuất" enabled="true">
-                    <boolProp name="TransactionController.includeTimers">false</boolProp>
-                    <boolProp name="TransactionController.parent">true</boolProp>
-                  </TransactionController>
-                  <hashTree>
-                    <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Xóa playerID khi ấn nút đăng xuất" enabled="true"/>
-                    <hashTree>
-                      <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Xóa playerID khi ấn nút đăng xuất" enabled="true">
-                        <collectionProp name="ModuleController.node_path">
-                          <stringProp name="764597751">Test Plan</stringProp>
-                          <stringProp name="764597751">Test Plan</stringProp>
-                          <stringProp name="224204364">Profile fragments</stringProp>
-                          <stringProp name="-1356161832">User command resource</stringProp>
-                          <stringProp name="-104654345">API - Xóa playerID khi ấn nút đăng xuất</stringProp>
-                        </collectionProp>
-                      </ModuleController>
-                      <hashTree/>
-                      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-                        <collectionProp name="Asserion.test_strings">
-                          <stringProp name="49586">200</stringProp>
-                        </collectionProp>
-                        <stringProp name="Assertion.custom_message"></stringProp>
-                        <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
-                        <boolProp name="Assertion.assume_success">false</boolProp>
-                        <intProp name="Assertion.test_type">16</intProp>
-                      </ResponseAssertion>
-                      <hashTree/>
-                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - Code" enabled="true">
-                        <stringProp name="JSON_PATH">$.code</stringProp>
-                        <stringProp name="EXPECTED_VALUE">200</stringProp>
-                        <boolProp name="JSONVALIDATION">true</boolProp>
-                        <boolProp name="EXPECT_NULL">false</boolProp>
-                        <boolProp name="INVERT">false</boolProp>
-                        <boolProp name="ISREGEX">false</boolProp>
-                        <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                      <hashTree/>
-                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - message" enabled="true">
-                        <stringProp name="JSON_PATH">$.message</stringProp>
-                        <stringProp name="EXPECTED_VALUE">Success</stringProp>
-                        <boolProp name="JSONVALIDATION">true</boolProp>
-                        <boolProp name="EXPECT_NULL">false</boolProp>
-                        <boolProp name="INVERT">false</boolProp>
-                        <boolProp name="ISREGEX">false</boolProp>
-                        <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                      <hashTree/>
-                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - success" enabled="true">
-                        <stringProp name="JSON_PATH">$.success</stringProp>
-                        <stringProp name="EXPECTED_VALUE">true</stringProp>
-                        <boolProp name="JSONVALIDATION">true</boolProp>
-                        <boolProp name="EXPECT_NULL">false</boolProp>
-                        <boolProp name="INVERT">false</boolProp>
-                        <boolProp name="ISREGEX">false</boolProp>
-                        <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                      <hashTree/>
-                    </hashTree>
-                  </hashTree>
-                  <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="2. Kiểm tra version hiện tại của app" enabled="true">
-                    <boolProp name="TransactionController.includeTimers">false</boolProp>
-                    <boolProp name="TransactionController.parent">true</boolProp>
-                  </TransactionController>
-                  <hashTree>
-                    <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Kiểm tra version hiện tại của app" enabled="true"/>
-                    <hashTree>
-                      <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Kiểm tra version hiện tại của app" enabled="true">
-                        <collectionProp name="ModuleController.node_path">
-                          <stringProp name="764597751">Test Plan</stringProp>
-                          <stringProp name="764597751">Test Plan</stringProp>
-                          <stringProp name="-253930698">Maintenance fragments</stringProp>
-                          <stringProp name="643684762">App-version-setting-controller</stringProp>
-                          <stringProp name="-2144428346">API - Kiểm tra version hiện tại của app</stringProp>
-                        </collectionProp>
-                      </ModuleController>
-                      <hashTree/>
-                      <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-                        <collectionProp name="Asserion.test_strings">
-                          <stringProp name="49586">200</stringProp>
-                        </collectionProp>
-                        <stringProp name="Assertion.custom_message"></stringProp>
-                        <stringProp name="Assertion.test_field">Assertion.response_headers</stringProp>
-                        <boolProp name="Assertion.assume_success">false</boolProp>
-                        <intProp name="Assertion.test_type">16</intProp>
-                      </ResponseAssertion>
-                      <hashTree/>
-                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - Code" enabled="true">
-                        <stringProp name="JSON_PATH">$.code</stringProp>
-                        <stringProp name="EXPECTED_VALUE">2000000</stringProp>
-                        <boolProp name="JSONVALIDATION">true</boolProp>
-                        <boolProp name="EXPECT_NULL">false</boolProp>
-                        <boolProp name="INVERT">false</boolProp>
-                        <boolProp name="ISREGEX">false</boolProp>
-                        <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                      <hashTree/>
-                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - message" enabled="true">
-                        <stringProp name="JSON_PATH">$.message</stringProp>
-                        <stringProp name="EXPECTED_VALUE">Thực hiện thành công</stringProp>
-                        <boolProp name="JSONVALIDATION">true</boolProp>
-                        <boolProp name="EXPECT_NULL">false</boolProp>
-                        <boolProp name="INVERT">false</boolProp>
-                        <boolProp name="ISREGEX">false</boolProp>
-                        <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
-                      <hashTree/>
-                      <com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion guiclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.gui.JSONPathAssertionGui" testclass="com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion" testname="jp@gc - JSON Path Assertion - success" enabled="true">
-                        <stringProp name="JSON_PATH">$.success</stringProp>
-                        <stringProp name="EXPECTED_VALUE">true</stringProp>
-                        <boolProp name="JSONVALIDATION">true</boolProp>
-                        <boolProp name="EXPECT_NULL">false</boolProp>
-                        <boolProp name="INVERT">false</boolProp>
-                        <boolProp name="ISREGEX">false</boolProp>
-                        <stringProp name="INPUT_FORMAT">JSON</stringProp>
-                      </com.atlantbh.jmeter.plugins.jsonutils.jsonpathassertion.JSONPathAssertion>
                       <hashTree/>
                     </hashTree>
                   </hashTree>
