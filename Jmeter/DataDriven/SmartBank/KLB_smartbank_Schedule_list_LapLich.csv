@@ -1,3 +1,0 @@
-test.id,http.path,test.level,test.objective,test.cifNo_csv,response.code_csv,response.message_csv,response.http_code_csv,active_or_not,groupcase
-1,transfer/schedule/cifNo,regression,Lấy danh sách lịch chuyển - Bỏ trống CifNo,"",400,getapi,200,active,group_systax
-2,transfer/schedule/cifNo,regression,Lấy danh sách lịch chuyển - Sai CifNo,ABC123,4030000,Bạn không có quyền thao tác trên tài khoản của người khác,200,active,group_systax
